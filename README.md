@@ -23,3 +23,4 @@ Konto schon vorhanden? (Ja oder Nein) <br>
  <br>
  Bei Anlage von Serie/Folge eingeben: genre, Zeit wie lang folge, Erscheinungsjahr <br>
  
+![UML](https://user-images.githubusercontent.com/91332921/140523233-ec2fab90-ec09-44fc-80ec-78feeaed511d.png)
