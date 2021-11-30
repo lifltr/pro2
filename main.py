@@ -1,19 +1,41 @@
 from flask import Flask
 from flask import render_template
 from flask import request
+from flask import redirect, url_for
+from daten import serie_speichern, serien_laden
 
-app = Flask("templates")
+app = Flask("Serien_Verwaltung")
 
 
-@app.route("/hello/", methods=['GET', 'POST'])
-def hello():
+@app.route("/serieAnlegen/", methods=['GET', 'POST'])
+def serieAnlegen():
     if request.method == 'POST':
-        ziel_person = request.form['vorname']
-        rueckgabe_string = "<li> " + ziel_person + "</li>"
 
-        return render_template("Serie_angelegt.html", ansprechperson=rueckgabe_string)
+        name = request.form['Serie']
+        serie = { "name":name, "genre": request.form['Genre']
+                  , "staffelanzahl": request.form['Staffelanzahl'], "erscheinungsjahr": request.form['Erscheinungsjahr']}
 
-    return render_template("index.html")
+        serie_speichern(name, serie)
+
+        return redirect(url_for("serien"))
+    else:
+        return render_template("index.html")
+
+@app.route("/serien/", methods=['GET'])
+def serien():
+    serien = serien_laden()
+    return render_template("Serie_angelegt.html", bibliothek=serien)
+
+def auflisten():
+    serien = serien_laden()
+
+    serien_liste = ""
+    for key, value in serien.items():
+        zeile = str(key) + ": " + value + "<br>"
+        serien_liste += zeile
+        # fragen wieso die Darstellung nicht funktioniert
+
+    return serien_liste
 
 
 if __name__ == "__main__":

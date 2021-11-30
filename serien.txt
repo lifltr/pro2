@@ -1,0 +1,8 @@
+{
+    "The Crown": {
+        "name": "The Crown",
+        "genre": "Drama",
+        "staffelanzahl": "4",
+        "erscheinungsjahr": "2016"
+    }
+}

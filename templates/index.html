@@ -1,22 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Serien Verwaltung</title>
-</head>
-<body>
-<h1>Serien Verwaltung</h1>
-
-<form method="POST">
-    <input type="text" name="Serie" placeholder="Serie Name"><br>
-    <br>
-    <input type="text" name="Genre" placeholder="Genre"><br>
-    <br>
-    <input type="text" name="Staffelanzahl" placeholder="Anzahl Staffeln"><br>
-    <br>
-    <input type="text" name="Erscheinungsjahr" placeholder="Erscheinungsjahr"><br>
-    <br>
-    <button type="submit">Senden</button>
-</form>
-</body>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <title>Serien Verwaltung</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    </head>
+    <body>
+        <nav>
+               <ul>
+                  <li><a href="/serieAnlegen">Serie hinzufügen</a></li>
+                  <li><a href="/serien">Serien Bibliothek</a></li>
+                  <li><a href="#">Bewertung abgeben</a></li>
+                  <li><a href="#">Suche</a></li>
+              </ul>
+        </nav>
+        <h1>Serien Verwaltung</h1>
+        <p>Hier kannst du eine neue Serie zu deiner Bibliothek hinzufügen.</p>
+            <form method="POST">
+                <input type="text" name="Serie" placeholder="Serie Name"><br>
+                <br>
+                <input type="text" name="Genre" placeholder="Genre"><br>
+                <br>
+                <input type="text" name="Staffelanzahl" placeholder="Anzahl Staffeln"><br>
+                <br>
+                <input type="text" name="Erscheinungsjahr" placeholder="Erscheinungsjahr"><br>
+                <br>
+                <button type="submit">Senden</button>
+            </form>
+    </body>
 </html>
