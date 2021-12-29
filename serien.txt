@@ -4,5 +4,11 @@
         "genre": "Drama",
         "staffelanzahl": "4",
         "erscheinungsjahr": "2016"
+    },
+    "Game of Thrones": {
+        "name": "Game of Thrones",
+        "genre": "Fantasy",
+        "staffelanzahl": "8",
+        "erscheinungsjahr": "2011"
     }
 }

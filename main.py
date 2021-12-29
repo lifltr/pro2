@@ -21,21 +21,29 @@ def serieAnlegen():
     else:
         return render_template("index.html")
 
+
 @app.route("/serien/", methods=['GET'])
 def serien():
     serien = serien_laden()
+    serien = auflisten(serien)
     return render_template("Serie_angelegt.html", bibliothek=serien)
 
-def auflisten():
-    serien = serien_laden()
+def auflisten(serien):
 
     serien_liste = ""
     for key, value in serien.items():
-        zeile = str(key) + ": " + value + "<br>"
+        zeile = str(key) + ": " + str(value["genre"]) + "<br>"
         serien_liste += zeile
         # fragen wieso die Darstellung nicht funktioniert
 
     return serien_liste
+
+
+@app.route("/bewertung/", methods=['GET'])
+def bewertung():
+    serien = serien_laden()
+
+    return render_template("bewertung.html")
 
 
 if __name__ == "__main__":

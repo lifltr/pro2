@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bewerte deine Serien</title>
+    </head>
+    <body>
+        <p>Das sind alle angelegten Serien:</p>
+        <p>Welche Serie möchtest du Bewerten</p>
+    {{  bibliothek  }}
+            <form method="POST">
+                        <input type="text" name="Serie" placeholder="Serie Name"><br>
+                        <br>
+                        <input type="text" name="Staffel" placeholder="Staffelnummer"><br>
+                        <br>
+                        <input type="text" name="Folge" placeholder="Folgennummer"><br>
+                        <br>
+                        <input type="text" name="Bewertung" placeholder="1-5 Sterne"><br>
+                        <br>
+                        <button type="submit">Senden</button>
+    </body>
+</html>
