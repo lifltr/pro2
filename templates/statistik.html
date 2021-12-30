@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Satistik</title>
+</head>
+    <body>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+             <ul class="navbar-nav">
+                 <li class="nav-item">
+                    <a class="nav-link" href="/serieAnlegen">Serie hinzufügen</a>
+                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="/serien">Bibliothek</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link" href="/statistik">Statistik</a>
+                 </li>
+             </ul>
+        </nav>
+        <h3>Statistik</h3>
+        <h6>Hier findest du interessante Statistiken zu deinen gesehenen Serien</h6>
+            <br>
+            <h4>Durchschnittliche Bewertungen der Serien innerhalb deiner gesehenen Genres</h4>
+            {% for key, value in statistik.items() %}
+            <h5>{{ key }}</h5>
+            <span>Durchschnitt</span>
+            <span>{{ value["durchschnitt"] }}</span>
+            {% endfor %}
+    </body>
+</html>

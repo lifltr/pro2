@@ -7,41 +7,25 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-                 <ul class="navbar-nav">
-                     <li class="nav-item">
-                        <a class="nav-link" href="/serieAnlegen">Serie hinzufügen</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="/serien">Serien Bibliothek</a>
-                     </li>
-                     <li class="nav-item">
-                         <a class="nav-link" href="/bewertung">Bewertung abgeben</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#">Suchen</a>
-                     </li>
-                 </ul>
-            </nav>
+             <ul class="navbar-nav">
+                 <li class="nav-item">
+                    <a class="nav-link" href="/serieAnlegen">Serie hinzufügen</a>
+                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="/serien">Bibliothek</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link" href="/statistik">Statistik</a>
+                 </li>
+             </ul>
+        </nav>
         <div class="container-fluid">
-            <h3>Das sind alle angelegten Serien:</h3>
+            <h3>Bibliothek</h3>
+            <h6>Hier findest du eine Übrsicht aller deiner angelegten Serien. Falls deine Bibliothek noch leer ist kannst
+                du unter "Serie hinzufügen" all deine gesehen Serien ergänzen.</h6>
+                <br>
+                <h5>Deine Serien</h5>
                 {{  bibliothek|safe }}<br>
                 <br>
-            <h4>Willst du eine neue Episode hinzufügen und bewerten?</h4>
-                <form method="POST">
-                    <label for="Episode">Wähle eine Serie:</label><br>
-
-                    <select name="Episode" id="Episode">
-                        <option value="key1">key1</option>
-                        <option value="key2">key2</option>
-                        <option value="key3">key3</option>
-                        <option value="key4">key4</option>
-                    </select>
-                    <p>du kannst eine Bewertung zwichen 1 und 5 abgeben.</p>
-                        <p>1 = schlecht und 5 = sehr gut</p>
-                        <input type="text" name="Bewertung" placeholder="Zahl 1-5"><br>
-                        <br>
-                    <button type="submit">Hinzufügen</button>
-                </form>
-
     </body>
 </html>

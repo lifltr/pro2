@@ -12,48 +12,77 @@
                     <a class="nav-link" href="/serieAnlegen">Serie hinzufügen</a>
                  </li>
                  <li class="nav-item">
-                    <a class="nav-link" href="/serien">Serien Bibliothek</a>
+                    <a class="nav-link" href="/serien">Bibliothek</a>
                  </li>
                  <li class="nav-item">
-                     <a class="nav-link" href="/bewertung">Bewertung abgeben</a>
-                 </li>
-                 <li class="nav-item">
-                     <a class="nav-link" href="#">Suchen</a>
+                     <a class="nav-link" href="/statistik">Statistik</a>
                  </li>
              </ul>
         </nav>
 
+        <div>
+
+        </div>
+
+
         <div class="container-fluid">
 
         <h3>Serien Verwaltung</h3>
-        <p>Hier kannst du eine neue Serie zu deiner Bibliothek hinzufügen.</p>
+        <h6>Hier kannst du eine neue Serie zu deiner Bibliothek hinzufügen.</h6>
 
-            <form action="/action_page.php" class="was-validated">
+            <form action="/serieAnlegen/" method="POST" class="was-validated">
                   <div class="form-group">
-                    <label for="Serie">Serie:</label>
-                    <input type="text" class="form-control" id="Serie" placeholder="Serie Name" name="Serie" required>
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Bitte ergänzen Sie dieses Eingabefeld.</div>
+                      <label for="Serie"><b>Serie</b></label>
+                        <input type="text" class="form-control" id="Serie" placeholder="Serie Name" name="Serie" required>
+                        <div class="valid-feedback">Valid.</div>
                   </div>
+                    <br>
                     <div class="form-group">
-                    <label for="Genre">Genre:</label>
-                    <input type="text" class="form-control" id="Genre" placeholder="Genre" name="Genre" required>
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Bitte ergänzen Sie dieses Eingabefeld.</div>
-                  </div>
+                        <label for="Genre"><b>Genre</b></label>
+                         <select multiple class="form-control" id="Genre">
+                          <option>Abenteuer</option>
+                          <option>Action</option>
+                          <option>Animation</option>
+                          <option>Dokumentation</option>
+                          <option>Drama</option>
+                          <option>Fantasy</option>
+                          <option>Horror</option>
+                          <option>Komödie</option>
+                          <option>Krimi</option>
+                          <option>Musik</option>
+                          <option>Mystery</option>
+                          <option>Romantik</option>
+                          <option>Science-Fiction</option>
+                          <option>Thriller</option>
+                          <option>Western</option>
+                          <option>Sonstiges</option>
+                          </select>
+                     </div>
+                        <br>
                      <div class="form-group">
-                    <label for="Staffelanzahl">Staffelanzahl:</label>
-                    <input type="text" class="form-control" id="Staffelanzahl" placeholder="Anzahl Staffeln" name="Staffelanzahl" required>
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Bitte ergänzen Sie dieses Eingabefeld.</div>
-                  </div>
-                 <div class="form-group">
-                    <label for="Erscheinungsjahr">Erscheinungsjahr:</label>
-                    <input type="text" class="form-control" id="Erscheinungsjahr" placeholder="Erscheinungsjahr" name="Erscheinungsjahr" required>
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Bitte ergänzen Sie dieses Eingabefeld.</div>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Senden</button>
+                     <label for="Staffelanzahl"><b>Staffelanzahl</b></label>
+                        <input type="text" class="form-control" id="Staffelanzahl" placeholder="Anzahl Staffeln" name="Staffelanzahl" required>
+                        <div class="valid-feedback">Valid.</div>
+                    </div>
+                        <br>
+                    <div class="form-group">
+                    <label for="Erscheinungsjahr"><b>Erscheinungsjahr</b></label>
+                        <input type="text" class="form-control" id="Erscheinungsjahr" placeholder="Erscheinungsjahr" name="Erscheinungsjahr" required>
+                        <div class="valid-feedback">Valid.</div>
+                    </div>
+                        <br>
+                    <div class="form-group">
+                        <label for="Bewertung"><b>Wie gafiel dir die Serie? (1=schlecht & 5=sehr gut)</b></label>
+                        <select multiple class="form-control" id="Bewertung">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                    </div>
+                        <br>
+                    <button type="submit" class="btn btn-primary">Senden</button>
             </form>
     </body>
 </html>

@@ -3,12 +3,21 @@
         "name": "The Crown",
         "genre": "Drama",
         "staffelanzahl": "4",
-        "erscheinungsjahr": "2016"
+        "erscheinungsjahr": "2016",
+        "bewertung": "3"
     },
     "Game of Thrones": {
         "name": "Game of Thrones",
         "genre": "Fantasy",
         "staffelanzahl": "8",
-        "erscheinungsjahr": "2011"
+        "erscheinungsjahr": "2011",
+        "bewertung": "5"
+    },
+    "The Witcher": {
+        "name": "The Witcher",
+        "genre": "Fantasy",
+        "staffelanzahl": "2",
+        "erscheinungsjahr": "2019",
+        "bewertung": "4"
     }
 }
