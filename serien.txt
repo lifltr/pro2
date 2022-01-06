@@ -19,5 +19,19 @@
         "staffelanzahl": "2",
         "erscheinungsjahr": "2019",
         "bewertung": "4"
+    },
+    "Dark": {
+        "name": "Dark",
+        "genre": "Science-Fiction",
+        "staffelanzahl": "3",
+        "erscheinungsjahr": "2017",
+        "bewertung": "5"
+    },
+    "Dexter": {
+        "name": "Dexter",
+        "genre": "Mystery",
+        "staffelanzahl": "8",
+        "erscheinungsjahr": "2006",
+        "bewertung": "5"
     }
 }

@@ -2,15 +2,22 @@
 ***Series Log*** <br>
 <br>
 <br>
-Mit diesem Series Log kann man Festhalten bei welcher Episode und Saffel man sich bei einer Serie befindet und kann jede einzelne Folge Bewerten.<br>
-Die Datenbank wird von Hand angelegt und dabei wird nach dem Seriennamen, dem Genre, der Anzahl Staffeln und dem Erscheinungsjahr gefragt.<br>
+Mit dem Series Log Programm kann man festhalten welche Serien man schon geschaut hat.
 <br>
-Nachdem die Serie angelegt wurde kann man die erstandene Bibliothek anhand von Genres, Staffelanzahl und dem Erscheinungsjahr dursuchen und den aktuellen Stand und die Bewertung der gesehenen Folge angeben.
+Ausserdem werden die Einträge mit den Tags Erscheinungsjahr, Staffelanzahl, Genre und Bewertung versehen.
+Die Einträge können mit allfälligen Änderungen immer wieder überschrieben werden.
 <br>
- # Ablauf
-![UML](https://user-images.githubusercontent.com/91332921/140523233-ec2fab90-ec09-44fc-80ec-78feeaed511d.png)
+Auf der Webseite können unter dem Kapitel "Bibliothek", alle bereits eingetragenen Serien angesehen werden.
 <br>
-# gebaut mit
+Unter dem Kapitel "Statistik" können interessante Statistiken über die gesehenen Serien des Benutzers eingesehen werden.
+Wie zum Beispiel die durchschnittliche Bewertungen innerhalb der Genre, die Serie mit der höchsten Bewertung, die mit der tiefsten Bewertung etc..
+<br> 
+
+# Ablauf
+<img alt="Ablaufdiagramm des Series Log Programms" src="C:\Users\Lisa\OneDrive\Dokumente\FHGR\3. Semester HS2021\Programmierung 2\Series_Log.png" title="UML Series Log"/>
+<br>
+
+# Gebaut mit
 - Python
 - HTML
 - Bootstrap

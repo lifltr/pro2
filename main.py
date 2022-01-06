@@ -17,8 +17,8 @@ def serieAnlegen():
     if request.method == 'POST':
 
         name = request.form['Serie']
-        serie = { "name":name, "genre": request.form['Genre']
-                  , "staffelanzahl": request.form['Staffelanzahl'], "erscheinungsjahr": request.form['Erscheinungsjahr'], "bewertung": request.form['Bewertung']}
+        serie = { "name":name, "genre": request.form.get('Genre'), "staffelanzahl": request.form['Staffelanzahl'],
+                  "erscheinungsjahr": request.form['Erscheinungsjahr'], "bewertung": request.form.get('Bewertung')}
 
         serie_speichern(name, serie)
 
@@ -27,12 +27,21 @@ def serieAnlegen():
         return render_template("index.html")
 
 
-@app.route("/serien/", methods=['GET'])
+@app.route("/bibliothek/", methods=['GET'])
 def serien():
     serien = serien_laden()
     serien = auflisten(serien)
-    return render_template("Serie_angelegt.html", bibliothek=serien)
+    return render_template("bibliothek.html", bibliothek=serien)
 
+def auflisten(serien):
+    serien_liste = ""
+    for key, value in serien.items():
+        zeile = str(key) + ": " + str(value["genre"]) + ", " + (value["staffelanzahl"]) + " Staffeln" + ", " + "Erscheinungsjahr: " +\
+                (value["erscheinungsjahr"]) + ", " + "deine Bewertung: " +(value["bewertung"]) + "<br>"
+        serien_liste += zeile
+
+
+    return serien_liste
 
 @app.route("/statistik/", methods=['GET'])
 def statistik():
@@ -49,22 +58,6 @@ def statistik():
 
     return render_template("statistik.html", statistik=durchschnitt)
 
-def auflisten(serien):
-    serien_liste = ""
-    for key, value in serien.items():
-        zeile = str(key) + ": " + str(value["genre"]) + ", " + (value["staffelanzahl"]) + " Staffeln" + ", " + "Erscheinungsjahr: " +\
-                (value["erscheinungsjahr"]) + ", " + "deine Bewertung: " +(value["bewertung"]) + "<br>"
-        serien_liste += zeile
-
-
-    return serien_liste
-
-
-@app.route("/bewertung/", methods=['GET'])
-def bewertung():
-    serien = serien_laden()
-
-    return render_template("bewertung.html")
 
 
 if __name__ == "__main__":

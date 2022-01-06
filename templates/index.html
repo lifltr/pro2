@@ -12,7 +12,7 @@
                     <a class="nav-link" href="/serieAnlegen">Serie hinzufügen</a>
                  </li>
                  <li class="nav-item">
-                    <a class="nav-link" href="/serien">Bibliothek</a>
+                    <a class="nav-link" href="/bibliothek">Bibliothek</a>
                  </li>
                  <li class="nav-item">
                      <a class="nav-link" href="/statistik">Statistik</a>
@@ -33,13 +33,13 @@
             <form action="/serieAnlegen/" method="POST" class="was-validated">
                   <div class="form-group">
                       <label for="Serie"><b>Serie</b></label>
-                        <input type="text" class="form-control" id="Serie" placeholder="Serie Name" name="Serie" required>
+                        <input type="text" class="form-control" id="Serie" name="Serie" required>
                         <div class="valid-feedback">Valid.</div>
                   </div>
                     <br>
                     <div class="form-group">
                         <label for="Genre"><b>Genre</b></label>
-                         <select multiple class="form-control" id="Genre">
+                         <select multiple class="form-control" id="Genre" name="Genre" required>
                           <option>Abenteuer</option>
                           <option>Action</option>
                           <option>Animation</option>
@@ -73,7 +73,7 @@
                         <br>
                     <div class="form-group">
                         <label for="Bewertung"><b>Wie gafiel dir die Serie? (1=schlecht & 5=sehr gut)</b></label>
-                        <select multiple class="form-control" id="Bewertung">
+                        <select multiple class="form-control" id="Bewertung" name="Bewertung" required>
                           <option>1</option>
                           <option>2</option>
                           <option>3</option>
