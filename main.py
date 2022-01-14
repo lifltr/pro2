@@ -26,6 +26,9 @@ def serieAnlegen():
     else:
         return render_template("index.html")
 
+# Hier wird die Startseite "Serie Anlegen" erstellt. Sie enthält aus einem Formular.
+#
+# Nach dem man das Formular ausgefühlt hat,wird man auf die Seite "bibliothek" weitergeleitet, wo die Funktion "serien" ausgeführt wird.
 
 @app.route("/bibliothek/", methods=['GET'])
 def serien():
@@ -46,17 +49,30 @@ def auflisten(serien):
 @app.route("/statistik/", methods=['GET'])
 def statistik():
     serien = serien_laden()
+
+
+
     genre = defaultdict(list)
     durchschnitt = {}
-    for key, serie in serien.items():
+    summe = 0
+    maximum = None
+    minimum = None
+
+    for name, serie in serien.items():
         bewertung = int(serie["bewertung"])
         genre[serie["genre"]].append(bewertung)
+        summe = summe + 1
+        if not maximum or int(maximum["bewertung"]) < bewertung:
+            maximum = serie
+        if not minimum or int(minimum["bewertung"]) > bewertung:
+            minimum = serie
 
     for key, items in genre.items():
         avg = sum(items) / len(items)
         durchschnitt[str(key)] = { "durchschnitt": avg }
 
-    return render_template("statistik.html", statistik=durchschnitt)
+    statistik = { "durchschnitt":durchschnitt, "summe":summe, "maximum":maximum, "minimum":minimum }
+    return render_template("statistik.html", statistik=statistik)
 
 
 
