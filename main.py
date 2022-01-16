@@ -11,6 +11,7 @@ app = Flask("Serien_Verwaltung")
 @app.route("/", methods=['GET'])
 def index():
     return render_template("index.html")
+# diese Seite wurde erstellt, dass nicht immer der url angepasst werden muss (kopie von index.html)
 
 @app.route("/serieAnlegen/", methods=['GET', 'POST'])
 def serieAnlegen():
@@ -27,7 +28,7 @@ def serieAnlegen():
         return render_template("index.html")
 
 # Hier wird die Startseite "Serie Anlegen" erstellt. Sie enthält aus einem Formular.
-#
+# durch die funktion serieAnlegen werden die Daten den richtigen Übertitel zugewiesen
 # Nach dem man das Formular ausgefühlt hat,wird man auf die Seite "bibliothek" weitergeleitet, wo die Funktion "serien" ausgeführt wird.
 
 @app.route("/bibliothek/", methods=['GET'])
@@ -35,6 +36,8 @@ def serien():
     serien = serien_laden()
     serien = auflisten(serien)
     return render_template("bibliothek.html", bibliothek=serien)
+
+# hier werden die Daten (serien_laden) welche in daten.py gespeichert werden aufgelistet wie es in der Funktion auflisten(serien) beschrieben wird.
 
 def auflisten(serien):
     serien_liste = ""
@@ -62,6 +65,7 @@ def statistik():
         bewertung = int(serie["bewertung"])
         genre[serie["genre"]].append(bewertung)
         summe = summe + 1
+
         if not maximum or int(maximum["bewertung"]) < bewertung:
             maximum = serie
         if not minimum or int(minimum["bewertung"]) > bewertung:
@@ -74,6 +78,9 @@ def statistik():
     statistik = { "durchschnitt":durchschnitt, "summe":summe, "maximum":maximum, "minimum":minimum }
     return render_template("statistik.html", statistik=statistik)
 
+# mit dem heruntergeladenen defaultdict wir eine leere Liste erstellt, dass einfacher mit den daten gerechnet werden kann
+# das Attrtibut Bewertung wird aus dem dictionary (serie) herausgenommen und als bewertung definiert.
+# wenn die Bewertung existiert und grösser als die bereits bestehende ist wird diese neu als maximum/minimum definiert.
 
 
 if __name__ == "__main__":
