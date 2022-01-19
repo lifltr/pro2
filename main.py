@@ -38,6 +38,7 @@ def serien():
     return render_template("bibliothek.html", bibliothek=serien)
 
 # hier werden die Daten (serien_laden) welche in daten.py gespeichert werden aufgelistet wie es in der Funktion auflisten(serien) beschrieben wird.
+# Dies funktioniert nur wegen der Funktion serien_laden() im daten.py file.
 
 def auflisten(serien):
     serien_liste = ""

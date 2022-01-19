@@ -13,6 +13,11 @@ Unter dem Kapitel "Statistik" können interessante Statistiken über die gesehen
 Wie zum Beispiel die durchschnittliche Bewertungen innerhalb der Genre, die Serie mit der höchsten Bewertung, die mit der tiefsten Bewertung etc..
 <br> 
 
+# Installation
+Das Projekt kann auf dem eigenen Gerät hernuntergeladen und installiert werden.
+<br>
+Alle Daten werden auf dem eigenen Gerät gespeichert.
+
 # Ablauf
 <img alt="Ablaufdiagramm des Series Log Programms" src="C:\Users\Lisa\OneDrive\Dokumente\FHGR\3. Semester HS2021\Programmierung 2\Series_Log.png" title="UML Series Log"/>
 <br>
@@ -20,6 +25,5 @@ Wie zum Beispiel die durchschnittliche Bewertungen innerhalb der Genre, die Seri
 # Gebaut mit
 - Python
 - HTML
-- Bootstrap
-- JQuery
+- Bootstrap (CSS)
 - Flask

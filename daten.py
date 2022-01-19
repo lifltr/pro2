@@ -13,6 +13,9 @@ def speichern(datei, key, value):
     with open(datei, "w") as open_file:
         json.dump(datei_inhalt, open_file, indent=4)
 
+# hier wird die Funktion speichern erstellt. Die Daten werden in einem json file gespeichert.
+# Falls es noch keine Einträge hat wird ein leeres dictionary erstellt.
+
 def bewertung_speichern(datei, name, staffel, episode, bewertung):
     try:
         with open(datei) as open_file:
@@ -29,6 +32,8 @@ def bewertung_speichern(datei, name, staffel, episode, bewertung):
 def serie_speichern(name, serie):
     speichern("serien.txt", name, serie)
 
+# die gespeicherten Daten werden in einem txt file gespeichert. Das Dictionary Serie ist in dem Dictionary Name gespeichert.
+
 def serien_laden():
     datei_name = "serien.txt"
 
@@ -39,3 +44,5 @@ def serien_laden():
         datei_inhalt = {}
 
     return datei_inhalt
+
+# diese Funktion erlaubt es die Daten aus dem json File abzurufen. Dies wird in der HTML Seite "Bibliothek" verwendet.
