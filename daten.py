@@ -14,20 +14,8 @@ def speichern(datei, key, value):
         json.dump(datei_inhalt, open_file, indent=4)
 
 # hier wird die Funktion speichern erstellt. Die Daten werden in einem json file gespeichert.
-# Falls es noch keine Einträge hat wird ein leeres dictionary erstellt.
+# Falls es noch keine Einträge hat, wird ein leeres dictionary erstellt.
 
-def bewertung_speichern(datei, name, staffel, episode, bewertung):
-    try:
-        with open(datei) as open_file:
-            datei_inhalt = json.load(open_file)
-    except FileNotFoundError:
-        datei_inhalt = {}
-
-    datei_inhalt[str(name)]["bewertung"]["S"+staffel+"E"+episode] = bewertung
-
-
-    with open(datei, "w") as open_file:
-        json.dump(datei_inhalt, open_file, indent=4)
 
 def serie_speichern(name, serie):
     speichern("serien.txt", name, serie)

@@ -27,9 +27,9 @@ def serieAnlegen():
     else:
         return render_template("index.html")
 
-# Hier wird die Startseite "Serie Anlegen" erstellt. Sie enthält aus einem Formular.
-# durch die funktion serieAnlegen werden die Daten den richtigen Übertitel zugewiesen
-# Nach dem man das Formular ausgefühlt hat,wird man auf die Seite "bibliothek" weitergeleitet, wo die Funktion "serien" ausgeführt wird.
+# Hier wird die Startseite "Serie Anlegen" erstellt. Sie besteht aus einem Formular.
+# durch die funktion serieAnlegen werden die Daten den richtigen Übertitel zugewiesen, so dass die Daten in einem Dictionary gespeichert werden können.
+# Nach dem man das Formular ausgefühlt hat, wird man auf die Seite "bibliothek" weitergeleitet, wo die Funktion "serien" ausgeführt wird.
 
 @app.route("/bibliothek/", methods=['GET'])
 def serien():
@@ -49,6 +49,8 @@ def auflisten(serien):
 
 
     return serien_liste
+
+#hier wird definiert, wie die Serie formatiert werden soll.
 
 @app.route("/statistik/", methods=['GET'])
 def statistik():
@@ -80,7 +82,7 @@ def statistik():
     return render_template("statistik.html", statistik=statistik)
 
 # mit dem heruntergeladenen defaultdict wir eine leere Liste erstellt, dass einfacher mit den daten gerechnet werden kann
-# das Attrtibut Bewertung wird aus dem dictionary (serie) herausgenommen und als bewertung definiert.
+# das Attrtibut Bewertung wird aus dem dictionary (serie) herausgenommen und als Bewertung definiert.
 # wenn die Bewertung existiert und grösser als die bereits bestehende ist wird diese neu als maximum/minimum definiert.
 
 

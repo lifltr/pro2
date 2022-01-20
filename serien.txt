@@ -33,5 +33,19 @@
         "staffelanzahl": "8",
         "erscheinungsjahr": "2006",
         "bewertung": "5"
+    },
+    "Grey\u2019s Anatomy": {
+        "name": "Grey\u2019s Anatomy",
+        "genre": "Drama",
+        "staffelanzahl": "18",
+        "erscheinungsjahr": "2005",
+        "bewertung": "3"
+    },
+    "Sex Education": {
+        "name": "Sex Education",
+        "genre": "Drama",
+        "staffelanzahl": "3",
+        "erscheinungsjahr": "2019",
+        "bewertung": "5"
     }
 }
