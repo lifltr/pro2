@@ -9,11 +9,15 @@ Die Einträge können mit allfälligen Änderungen immer wieder überschrieben w
 <br>
 Auf der Webseite können unter dem Kapitel "Bibliothek", alle bereits eingetragenen Serien angesehen werden.
 <br>
-Unter dem Kapitel "Statistik" können interessante Statistiken über die gesehenen Serien des Benutzers eingesehen werden.
-Wie die durchschnittliche Bewertungen innerhalb der Genre, die Serie mit der höchsten Bewertung, die mit der tiefsten
-Bewertung und die totale Anzahl der gesehenen Serien.
-<br> 
-So verliert man niemehr ide Übersicht über die bereits gesehnen Serien und wie gut oder schlecht man diese fand.
+Unter dem Kapitel "Statistik" können interessante Statistiken über die gesehenen Serien des Benutzers eingesehen werden.<br>
+Folgende Statistiken werden ausgegeben:
+- Durchschnittliche Bewertungen innerhalb des Genres
+- die Serie mit der höchsten Bewertung
+- die Serie mit der tiefsten Bewertung
+- totale Anzahl der gesehenen Serien.
+<br>
+
+So verliert man niemehr die Übersicht über die bereits gesehnen Serien und wie gut oder schlecht man diese fand.
 <br>
 # Workflow
 Die Daten werden über ein Formular in einem json file gespeichert und in der Biblithek angezeigt. In der Statistik wird
@@ -25,7 +29,13 @@ Das Projekt kann auf dem eigenen Gerät hernuntergeladen und installiert werden.
 Alle Daten werden auf dem eigenen Gerät gespeichert.
 <br>
 # Ablaufdiagramm
-![Ablaufdiagramm](C:\Users\Lisa\PycharmProjects\pythonProject\Series_Log.png)
+![Ablaufdiagramm_Series_Log](C:\Users\Lisa\PycharmProjects\pythonProject\ablaufdiagramm.png)
+<br>
+# Mögliche Erweiterungen
+Das Programm könnte mit weiteren Statistiken erweitert werden welche noch mehr Einsichten in das Sehverhalten des Users
+geben könnten. Aussderdem könnte man das Programm so erweitern, dass mehrere Nutzer sich registrieren könnten und ihr
+Sehverhalten mit einer Community austauschen könnten. Natürlich könnte auch das Design der Webseite noch ausgebaut und
+verschönert werden.
 <br>
 # Gebaut mit
 - Python

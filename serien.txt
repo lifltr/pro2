@@ -54,5 +54,12 @@
         "staffelanzahl": "1",
         "erscheinungsjahr": "2021",
         "bewertung": "3"
+    },
+    "Euphoria": {
+        "name": "Euphoria",
+        "genre": "Drama",
+        "staffelanzahl": "2",
+        "erscheinungsjahr": "2019",
+        "bewertung": "3"
     }
 }
