@@ -43,7 +43,7 @@ def serien():
 def auflisten(serien):
     serien_liste = ""
     for key, value in serien.items():
-        zeile = str(key) + ": " + str(value["genre"]) + ", " + (value["staffelanzahl"]) + " Staffeln" + ", " + "Erscheinungsjahr: " +\
+        zeile = str(key) + ": " + str(value["genre"]) + ", " + (value["staffelanzahl"]) + " Staffel(n)" + ", " + "Erscheinungsjahr: " +\
                 (value["erscheinungsjahr"]) + ", " + "deine Bewertung: " +(value["bewertung"]) + "<br>"
         serien_liste += zeile
 

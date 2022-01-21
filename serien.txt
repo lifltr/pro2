@@ -47,5 +47,12 @@
         "staffelanzahl": "3",
         "erscheinungsjahr": "2019",
         "bewertung": "5"
+    },
+    "Shadow and Bone": {
+        "name": "Shadow and Bone",
+        "genre": "Fantasy",
+        "staffelanzahl": "1",
+        "erscheinungsjahr": "2021",
+        "bewertung": "3"
     }
 }
